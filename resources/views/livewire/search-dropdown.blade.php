@@ -1,11 +1,13 @@
-<div class="relative mt-3 md:mt-0">
-    <input wire:model="search" type="text" class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1 focus:outline-none text-sm" placeholder="Search....">
+<div class="relative mt-3 md:mt-0" x-data="{resultsShown:true}" @click.away="resultsShown=false">
+    <input wire:model="search" type="text" class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1 focus:outline-none text-sm"
+           placeholder="Search...." @focus="resultsShown=true" @keydown.escape.window="resultsShown=false"
+            @keydown="resultsShown=true">
     <div class="absolute top-0 ml-2 pt-2">
         <img src="https://image.flaticon.com/icons/png/128/482/482631.png" class="w-4 h-4" alt="">
     </div>
 
     @if(strlen($search)>=2)
-        <div class="absolute bg-gra-800 w-64 mt-4">
+        <div class="absolute bg-gra-800 w-64 mt-4" x-show="resultsShown">
             @if(count($searchResult) >0)
                 <ul class="bg-gray-600">
                     @foreach($searchResult as $result)
