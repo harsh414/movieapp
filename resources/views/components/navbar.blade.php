@@ -8,13 +8,13 @@
                 </a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="{{route('movies.index')}}" class="hover:text-gray-300">Movies</a>
+                <a href="{{route('movies.index')}}" class="hover:text-gray-300 hover:bg-black font-semibold bg-gray-400 w-36 rounded-full pl-2 pr-2 ">Movies</a>
             </li>
+{{--            <li class="md:ml-6 mt-3 md:mt-0">--}}
+{{--                <a href="" class="hover:text-gray-300 hover:bg-black font-semibold bg-gray-400 w-36 rounded-full pl-2 pr-2">TV Shows</a>--}}
+{{--            </li>--}}
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300">TV Shows</a>
-            </li>
-            <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300">Actors</a>
+                <a href="{{route('actors.index')}}" class="hover:text-gray-300 hover:bg-black font-semibold bg-gray-400 w-36 rounded-full pl-2 pr-2">Actors</a>
             </li>
         </ul>
         <div class="flex flex-col md:flex-row items-center">
@@ -24,11 +24,22 @@
                         <img src="https://picsum.photos/200" alt="avatar" class="rounded-full w-8 h-8">
                         <div @click.prevent="nav=!nav;"><img src="https://img.icons8.com/plumpy/2x/expand-arrow.png" class="bg-white rounded-xl w-4 h-4 ml-2" alt=""></div>
                     </a>
-                    <div class="absolute bg-gra-800 w-32 mt-4" x-show="nav">
-                        <ul class="bg-gray-600">
-                            <li class="border border-b border-gray-800">
-                               <!--auth item here -->
-                            </li>
+                    <div class="absolute bg-gra-800 w-32 mt-4" x-show.transition.duration.1000="nav">
+                        <ul>
+                            @auth
+                                <li class="border-b border-gray-500 bg-gray-100">
+                                    {{auth()->user()->name}}
+                               </li>
+                            @else
+                                <li class="border-b border-gray-500 bg-gray-300 text-black">
+{{--                                    <a href="{{ route('register') }}"><button class="bg-blue-400 w-25 shadow font-bold text-white rounded-lg px-4 py-2 my-1 text-blue-600 lg:mr-1" >Sign Up</button></a>--}}
+                                    Signup
+                                </li>
+                                <li class="border-b border-gray-500 bg-gray-300 text-black">
+{{--                                    <a href="{{ route('login') }}"><button class="bg-dark w-25 shadow font-bold text-black rounded-lg px-4 py-2 my-1 text-white lg:mr-1">Login</button></a>--}}
+                                    Login
+                                </li>
+                            @endauth
                         </ul>
                     </div>
                 </div>

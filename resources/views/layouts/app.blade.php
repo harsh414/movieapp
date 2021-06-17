@@ -16,5 +16,6 @@
     <x-navbar/> <!--navbar component -->
     @yield('content')
     <livewire:scripts/>
+    @yield('scripts')
 </body>
 </html>
