@@ -10,9 +10,9 @@
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="{{route('movies.index')}}" class="hover:text-gray-300 hover:bg-black font-semibold bg-gray-400 w-36 rounded-full pl-2 pr-2 ">Movies</a>
             </li>
-{{--            <li class="md:ml-6 mt-3 md:mt-0">--}}
-{{--                <a href="" class="hover:text-gray-300 hover:bg-black font-semibold bg-gray-400 w-36 rounded-full pl-2 pr-2">TV Shows</a>--}}
-{{--            </li>--}}
+            <li class="md:ml-6 mt-3 md:mt-0">
+                <a href="{{route('tvShows.index')}}" class="hover:text-gray-300 hover:bg-black font-semibold bg-gray-400 w-36 rounded-full pl-2 pr-2">TV Shows</a>
+            </li>
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="{{route('actors.index')}}" class="hover:text-gray-300 hover:bg-black font-semibold bg-gray-400 w-36 rounded-full pl-2 pr-2">Actors</a>
             </li>
