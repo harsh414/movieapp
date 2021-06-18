@@ -24,7 +24,7 @@
                 </p>
 
                 <div class="mt-12">
-                    <h4 class="text-white font-semibold text-sm font-semibold bg-gray-400 w-28 rounded-full pl-2 pr-2">Featured Crew</h4>
+                    <h4 class="text-white text-sm font-semibold bg-gray-400 w-28 rounded-full pl-2 pr-2">Featured Crew</h4>
                     <div class="flex flex-wrap mt-4">
                         @foreach ($movie['credits']['crew'] as $crew)
                             <div class="mr-14">
@@ -100,11 +100,11 @@
                 @foreach($movie['credits']['cast'] as $cast)
                     @if($loop->index <10)
                         <div class="mt-8">
-                            <a href="">
+                            <a href="{{route('actors.description',$cast['id'])}}">
                                 <img src="{{'https://image.tmdb.org/t/p/w500/'.$cast['profile_path']}}" alt="" class="hover:opacity-75 transition ease-in-out ">
                             </a>
                             <div class="mt-2">
-                                <a href="" class="text-lg mt-2 hover:text-gray-300">{{$cast['original_name']}}</a>
+                                <a href="{{route('actors.description',$cast['id'])}}" class="text-lg mt-2 hover:text-gray-300">{{$cast['original_name']}}</a>
                                 <div class="text-gray-300 text-sm">  <!--tags-->
                                     {{$cast['character']}}
                                 </div>

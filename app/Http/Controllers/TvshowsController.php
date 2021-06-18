@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class TvshowsController extends Controller
 {
-    public function index()
-    {
+    public function index() {
         $popularShows = Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/tv/popular')->json()['results'];
 
@@ -30,8 +29,7 @@ class TvshowsController extends Controller
         ]);
     }
 
-    public function show($id)
-    {
+    public function show($id) {
         $show = Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/tv/' . $id . '?append_to_response=credits,videos,images,reviews')->json();
 //        dd($show);

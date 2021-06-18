@@ -100,11 +100,11 @@
                 @foreach($show['credits']['cast'] as $cast)
                     @if($loop->index <10)
                         <div class="mt-8">
-                            <a href="">
+                            <a href="{{route('actors.description',$cast['id'])}}">
                                 <img src="{{'https://image.tmdb.org/t/p/w500/'.$cast['profile_path']}}" alt="" class="hover:opacity-75 transition ease-in-out ">
                             </a>
                             <div class="mt-2">
-                                <a href="" class="text-lg mt-2 hover:text-gray-300">{{$cast['original_name']}}</a>
+                                <a href="{{route('actors.description',$cast['id'])}}" class="text-lg mt-2 hover:text-gray-300">{{$cast['original_name']}}</a>
                                 <div class="text-gray-300 text-sm">  <!--tags-->
                                     {{$cast['character']}}
                                 </div>
