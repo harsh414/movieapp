@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'asset_url' => 'http://searchmovieshow.herokuapp.com',
+    'asset_url' => url('/'),
 
     /*
     |--------------------------------------------------------------------------
