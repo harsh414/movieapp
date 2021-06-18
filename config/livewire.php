@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'asset_url' => 'https://pacific-savannah-95754.herokuapp.com',
+    'asset_url' => 'http://searchmovieshow.herokuapp.com',
 
     /*
     |--------------------------------------------------------------------------
