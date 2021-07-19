@@ -8,7 +8,9 @@
             <img src="https://img.icons8.com/emoji/2x/star-emoji.png" class="w-4 h-4" alt="">
             <span class="ml-1">{{$movie['vote_average']*10}}%</span>
             <span class="ml-1">|</span>
+            @if(array_key_exists("release_date",$movie))
             <span class="ml-1">{{\Carbon\Carbon::parse(($movie['release_date']))->format('M d,Y')}}</span>
+            @endif
         </div>
         <div class="text-gray-300 text-sm">  <!--tags-->
             @foreach($movie['genre_ids'] as $id)

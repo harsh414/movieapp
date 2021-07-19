@@ -7,13 +7,13 @@
     </div>
 
     @if(strlen($search)>=2)
-        <div class="absolute bg-gra-800 w-64 mt-4" x-show="resultsShown">
+        <div class="absolute bg-gray-800 w-64 mt-4" x-show="resultsShown">
             @if(count($searchResult) >0)
                 <ul class="bg-gray-600">
                     @foreach($searchResult as $result)
                         <li class="border border-b border-gray-800">
                             <a href="{{route('movies.show',$result['id'])}}" class="block hover:bg-black flex flex-row px-3 py-3">
-                                <img src="{{'https://image.tmdb.org/t/p/w500/'.$result['poster_path']}}" class="rounded-full w-10 h-10">
+                                <img src="" class="rounded-full w-10 h-10">
                                 <span class="ml-3 mt-1">{{$result['title']}}</span>
                             </a>
                         </li>

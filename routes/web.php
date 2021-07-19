@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
-//Auth::routes();
+Auth::routes();
 
 Route::get('/', 'MoviesController@index')->name('movies.index');
 Route::get('/movies/{movie}', 'MoviesController@show')->name('movies.show');

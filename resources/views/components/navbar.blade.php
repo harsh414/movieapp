@@ -19,32 +19,7 @@
         </ul>
         <div class="flex flex-col md:flex-row items-center">
             <livewire:search-dropdown/>
-{{--                <div class="md:ml-4 mt-3 md:mt-0">--}}
-{{--                    <a href="#" class="flex flex-row items-center">--}}
-{{--                        <img src="https://picsum.photos/200" alt="avatar" class="rounded-full w-8 h-8">--}}
-{{--                        <div @click.prevent="nav=!nav;" @click.away.prevent="nav=false"><img src="https://img.icons8.com/plumpy/2x/expand-arrow.png" class="bg-white rounded-xl w-4 h-4 ml-2" alt=""></div>--}}
-{{--                    </a>--}}
-{{--                    <div class="absolute border border-gray-200 bg-gra-800 w-32 mt-4" x-show.transition.duration.1000="nav">--}}
-{{--                        <ul>--}}
-{{--                            @auth--}}
-{{--                                <li class="border-b border-gray-500 bg-gray-100">--}}
-{{--                                    {{auth()->user()->name}}--}}
-{{--                               </li>--}}
-{{--                            @else--}}
-{{--                                <li class="border-b border-gray-500 bg-gray-500 text-black text-center m-2">--}}
-{{--                                    <a href="{{ route('register') }}" class="ml-1 tracking-wider">--}}
-{{--                                        SignUp--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                                <li class="border-b border-gray-500 bg-gray-300 text-black text-center">--}}
-{{--                                    <a href="{{ route('login') }}" class="ml-1 tracking-wider">--}}
-{{--                                        Login--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                            @endauth--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+
         </div>
     </div>
 </nav>
